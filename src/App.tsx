@@ -39,10 +39,10 @@ function App() {
   };
 
   // Delete a record from the positive or negative records array
-  const handleDeleteRecord = (index: number, type: string) => {
-    if (type === "positive") {
+  const handleDeleteRecord = (index: number, operation: string) => {
+    if (operation === "positive") {
       setPositiveRecords((prev) => prev.filter((_, i) => i !== index));
-    } else if (type === "negative") {
+    } else if (operation === "negative") {
       setNegativeRecords((prev) => prev.filter((_, i) => i !== index));
     }
   };
